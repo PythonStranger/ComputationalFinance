@@ -102,3 +102,14 @@ xing times and M is the number of paths.
 #                    rand(5, 10000), 'euler')
 # c = MCOptionPrices(S0, K, T, [.01, .03, .04, .04, .05, .051, .1], sigma, [1, 2, 3, 4, 5], [100, 200, 300, 400, 10000],
 #                    rand(5, 10000), 'standard')
+# K = 95.0;
+# S0 = 100.0;
+# r = 0.1;
+# sigma = 0.5;
+# T = 0.25;
+# t = [0.05,0.1, 0.15, 0.2, 0.25]
+# rateCurve = [.1, .1, .1, .1, .1, .1, .1]
+#
+# c = MCOptionPrices(S0, K, T, rateCurve, sigma, t, [100, 200, 300, 400, 10000],
+#                    rand(5, 10000), 'standard')
+# print(c)

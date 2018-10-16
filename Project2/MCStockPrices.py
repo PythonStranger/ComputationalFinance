@@ -84,11 +84,13 @@ def MCStockPrices(S0, sigma, rateCurve, t, samples, integrator):
     return stock_path
 
 #
-# K = 110.0;
-# S0 = 100.0;
-# r = 0.05;
-# sigma = 0.4;
-# T = 2.5;
+K = 95.0;
+S0 = 100.0;
+r = 0.1;
+sigma = 0.5;
+T = 0.25;
+t = [0.05,0.1, 0.15, 0.2, 0.25]
+rateCurve = [.1, .1, .1, .1, .1, .1, .1]
 # # (S0, sigma, rateCurve, t, samples, integrator)
 # a = {"standard":mean(
 #    MCStockPrices(S0, sigma, [.01, .03, .04, .04, .05, .051, .1], [1, 2, 3, 4, 5], rand(5, 1000000), 'standard')[-1,
@@ -98,4 +100,4 @@ def MCStockPrices(S0, sigma, rateCurve, t, samples, integrator):
 #     "milstein":mean(MCStockPrices(S0, sigma, [.01, .03, .04, .04, .05, .051, .1], [1, 2, 3, 4, 5], rand(5, 1000000), 'milstein')[
 #          -1, :])}
 #
-# b = MCStockPrices(S0, sigma, [.01, .03, .04, .04, .05, .051, .1], [1, 2, 3, 4, 5], rand(5, 1000000), 'standard')[0, :]
+b = MCStockPrices(S0, sigma, rateCurve, t,  rand(5, 1000000), 'standard')[0, :]
